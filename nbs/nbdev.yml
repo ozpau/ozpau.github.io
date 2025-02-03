@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "ozpau.github.io"
+  site-url: "https://ozpau.github.io/ozpau.github.io"
+  description: "My blog"
+  repo-branch: main
+  repo-url: "https://github.com/ozpau/ozpau.github.io"
