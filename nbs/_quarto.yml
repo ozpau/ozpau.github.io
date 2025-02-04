@@ -3,19 +3,37 @@ project:
 
 format:
   html:
-    theme: cosmo
+    theme:
+        light: united
+        dark: superhero
     css: styles.css
     toc: true
     keep-md: true
   commonmark: default
 
 website:
+  title: "Ozell Paukert"
+  site-url: https://ozpau.github.io/
+  description: "Ozell Paukert Website"
   twitter-card: true
   open-graph: true
   repo-actions: [issue]
+  favicon: favicon.png
+  draft-mode: visible
+  margin-header: subscribe.html
   navbar:
     background: primary
     search: true
+    left:
+      - text: "Blog"
+        href: blog/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/ozpau
+      - icon: twitter
+        href: https://bsky.app/profile/ozpau.bsky.social
+      - icon: rss
+        href: index.xml
   sidebar:
     style: floating
 

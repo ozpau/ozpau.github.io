@@ -1,0 +1,17 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core.ipynb
+      - subscribe.html
+      - section: blog
+        contents:
+          - section: posts
+            contents:
+              - section: 2025-02-03-fastai-timeseries
+                contents: []
+                href: blog/posts/2025-02-03-fastai-timeseries/index.ipynb
+              - section: 2025-02-04-jupyter-tips
+                contents: []
+                href: blog/posts/2025-02-04-jupyter-tips/index.ipynb
+        href: blog/index.qmd
