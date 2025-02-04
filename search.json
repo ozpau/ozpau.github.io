@@ -1,0 +1,113 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ozell Paukert",
+    "section": "",
+    "text": "Checkout my blog.",
+    "crumbs": [
+      "Blog",
+      "Ozell Paukert"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-03-fastai-timeseries/index.html",
+    "href": "blog/posts/2025-02-03-fastai-timeseries/index.html",
+    "title": "Tweaking fastai tabular for time series data",
+    "section": "",
+    "text": "You can make your model considerably more powerful by careful feature engineering for timeseries data.\nSources: - https://www.kaggle.com/learn/time-series - https://www.kaggle.com/competitions/playground-series-s5e1\nMain ideas: - Add calendar periodic features - Need to combine test and train data together for this to work properly - Add autoregressive features - Augment with external data: - Currency exchange rate - Census (there are predictive data for this)",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-03-fastai-timeseries"
+    ]
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Ozell Paukert Blog",
+    "section": "",
+    "text": "Jupyter tips\n\n\n\n\n\n\njupyter\n\n\ntips\n\n\n\n\n\n\n\n\n\nFeb 3, 2025\n\n\nOzell Paukert\n\n\n\n\n\n\n\n\n\n\n\n\nTweaking fastai tabular for time series data\n\n\n\n\n\n\nfastai\n\n\nkaggle\n\n\ntips\n\n\n\n\n\n\n\n\n\nFeb 3, 2025\n\n\nOzell Paukert\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Blog",
+      "blog"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-04-jupyter-tips/index.html",
+    "href": "blog/posts/2025-02-04-jupyter-tips/index.html",
+    "title": "Jupyter tips",
+    "section": "",
+    "text": "Public domain photo of planet Jupiter from WikiMedia\nA collection of Jupyter productivity tips.",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-04-jupyter-tips"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-04-jupyter-tips/index.html#learn-keybinds",
+    "href": "blog/posts/2025-02-04-jupyter-tips/index.html#learn-keybinds",
+    "title": "Jupyter tips",
+    "section": "Learn keybinds",
+    "text": "Learn keybinds\n\nPress Ctrl+Shift+H to view a short summary\nThere are two edit modes in Jupyter. Text edit inside cells and cell edit. To leave cell edit mode, press ESC, to enter it press ENTER. In cell edit, you can:\n\ndrag cells around: Ctrl+Shift+Up/Down\nchange their type: M, Y, R\n\nGlobal navigation (cell edit mode):\n\nSpace to move down, Shift+Space to move up\n\nCtrl+Enter vs Shift+Enter make a huge difference for cells thar produce lots of output. Ctrl+Enter would keep cursor at current cell, allowing you to naturally scroll through the output from top to bottom.",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-04-jupyter-tips"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-04-jupyter-tips/index.html#make-your-own-shortcuts",
+    "href": "blog/posts/2025-02-04-jupyter-tips/index.html#make-your-own-shortcuts",
+    "title": "Jupyter tips",
+    "section": "Make your own shortcuts",
+    "text": "Make your own shortcuts\n\nFor example, ESC will take you out of cell edit mode AND will disable fullscreen. Very annoying. Rebinding this to Ctrl+Space makes things much more convenient. To change settings, in JupyterLab go to Settings-&gt;Settings Editor-&gt;Keyboard Shortcuts\nThere are also extra settings you can change by editing a json file.",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-04-jupyter-tips"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-04-jupyter-tips/index.html#run-jupyter-in-standalone-browser-window",
+    "href": "blog/posts/2025-02-04-jupyter-tips/index.html#run-jupyter-in-standalone-browser-window",
+    "title": "Jupyter tips",
+    "section": "Run jupyter in standalone browser window",
+    "text": "Run jupyter in standalone browser window\n\nThis will allow you to use more shortcuts.\nThis also gives you fullscreen which you can’t turn off (so, no need to rebind ESC key anymore)\nTo run jupyterlab in Firefox kiosk mode, run: firefox --kiosk --new-window http://localhost:8888/lab\nAfter that, to navigate to other windows, use Alt+Tab, and to close window use Ctrl+W\nIf you have multi-monitor setup, what I found to work is first move terminal from which you enter this command to the monitor you want jupyterlab to start on.\nThis works, but some things are broken. For example, clicking on links inside jupyter notebooks will break things.\n\nThis solution is a bit hacky. If you can, try jupyterlab-desktop: https://github.com/jupyterlab/jupyterlab-desktop\nIt handles link opening issue slightly better: it opens a new window. But still, it could have been better if it opened it in the default system browser instead. It is an open bug right now: https://github.com/jupyterlab/jupyterlab-desktop/issues/618 (I have a patch that fixes it in my github repo if you need it)\nOn the plus side, you can use it to connect to your own instance of jupyterlab.",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-04-jupyter-tips"
+    ]
+  },
+  {
+    "objectID": "blog/posts/2025-02-04-jupyter-tips/index.html#exception-handling",
+    "href": "blog/posts/2025-02-04-jupyter-tips/index.html#exception-handling",
+    "title": "Jupyter tips",
+    "section": "Exception handling",
+    "text": "Exception handling\nWhat if you have a cell that might raise an exception but you must step to the next cell (perhaps to do some cleanup?) even if there is an exception? This is where cell tags come into play.\nSelect a cell, click on cogwheels on the right, then Common tools, and click add tag. Write raises-exception there and you are good to go. You can now write any cleanup code in the next cell.\nThis can help you not having to restart the whole notebook just because you got an exception thrown out and you didn’t do some critical cleanup.\nAlso, if you are working on a single notebook, consider using classical Jupyter notebook. It has less crowded interface and is snappier.",
+    "crumbs": [
+      "Blog",
+      "blog",
+      "posts",
+      "2025-02-04-jupyter-tips"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()",
+    "crumbs": [
+      "Blog",
+      "core"
+    ]
+  }
+]
